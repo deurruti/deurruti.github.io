@@ -11,6 +11,9 @@
 
 .view-container {
     margin-top: 125px;
+    @media only screen and (max-width: 640px){
+      margin-top: 300px;
+    }
     background-color: hsla(0,0%,100%,.8);
     padding: 30px;
     width: 75%;
@@ -20,6 +23,7 @@
   -webkit-overflow-scrolling: touch;
   .about-content{
     padding: 5% 10%;
+    //text-align: justify;
     .content-image{
       .image{
         border-radius: 50%;
