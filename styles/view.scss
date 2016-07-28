@@ -11,12 +11,14 @@
 
 .view-container {
     margin-top: 125px;
-    @media only screen and (max-width: 640px){
-      margin-top: 300px;
-    }
+
     background-color: hsla(0,0%,100%,.8);
     padding: 30px;
     width: 75%;
+    @media only screen and (max-width: 640px){
+      margin-top: 250px;
+      width: 100%;
+    }
 }
 
 .about-view{
