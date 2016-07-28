@@ -8,6 +8,7 @@ html {
     }
     body {
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
         background-color:#000000;
         background-image:url("http://i.imgur.com/NpV3Wms.png");
     }
