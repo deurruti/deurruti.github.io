@@ -1,12 +1,18 @@
 import React  from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, hashHistory , IndexRoute} from 'react-router'
+import { Link } from 'react-router'
+import About from './About'
+import Home from './Home'
+import App from './Nav'
 
-const App = React.createClass({
-  render: function(){
-    return <div> This is my app </div>
-  }
-})
+require('../styles/index.scss');
 
-ReactDOM.render(
-  <App />
-  ,document.getElementById('app'))
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
+      <Route path="/about" component={About}/>
+    </Route>
+  </Router>
+),document.getElementById('app'))
