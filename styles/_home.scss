@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+html, body{
+  height: 100%;
+}
+
+html {
+        overflow-y: hidden;
+    }
+    body {
+        overflow-y: scroll;
+        background-color:#000000;
+        background-image:url("http://i.imgur.com/NpV3Wms.png");
+    }
 
 body {
-	background-image: url("http://i.imgur.com/NpV3Wms.png");
+	//background-image: url("http://i.imgur.com/NpV3Wms.png");
 	//font-family: Helvetica,Arial,Verdana,"Hiragino Kaku Gothic Pro","Hiragino Kaku Gothic Pro W3";
 	//font-family: CoreSans, Arial, sans-serif;
   background-size: cover;

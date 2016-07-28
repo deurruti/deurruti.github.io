@@ -27978,7 +27978,7 @@
 	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./index.scss */ 240);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 241)(content, {});
+	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 242)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -28001,18 +28001,76 @@
   \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 242)();
+	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 241)();
 	// imports
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Space+Mono);", ""]);
 	
 	// module
-	exports.push([module.id, "body {\n  background-image: url(\"http://i.imgur.com/NpV3Wms.png\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  font-family: 'Space Mono', monospace;\n  font-size: 16px;\n  display: block;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  line-height: 1.6;\n  margin-bottom: 5%;\n  background-attachment: fixed; }\n\n.container {\n  position: relative;\n  width: 100%;\n  max-width: 960px;\n  margin: 0 auto;\n  padding: 0 20px;\n  box-sizing: border-box; }\n\n.view-container {\n  margin-top: 125px;\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 30px;\n  width: 75%; }\n\n.about-view .about-content {\n  padding: 5% 10%; }\n  .about-view .about-content .content-image .image {\n    border-radius: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto; }\n\n.nav {\n  -webkit-box-pack: center;\n  justify-content: center;\n  background: rgba(255, 255, 255, 0.9);\n  margin: 0;\n  width: 100%;\n  height: 100px;\n  border-bottom: 3px solid #d75c37;\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  display: flex;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1000;\n  flex-flow: row;\n  align-items: center; }\n  .nav .nav-row {\n    display: flex;\n    flex-flow: row;\n    -webkit-box-align: center;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n    width: 80%; }\n    .nav .nav-row .nav-content {\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      display: flex;\n      align-items: center;\n      font-size: 0.8em; }\n      .nav .nav-row .nav-content #nav-name {\n        font-size: 2em; }\n      .nav .nav-row .nav-content #nav-title {\n        margin-left: 20px;\n        text-transform: lowercase;\n        display: inline-block; }\n        @media screen and (max-width: 780px) {\n          .nav .nav-row .nav-content #nav-title {\n            display: none; } }\n    .nav .nav-row ul {\n      list-style: none;\n      margin: 0;\n      padding: 20px;\n      font-size: .8em;\n      text-transform: uppercase;\n      display: flex;\n      flex-flow: row;\n      justify-content: flex-start;\n      align-items: center; }\n      .nav .nav-row ul li {\n        float: right;\n        margin: 10px; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%; }\n\nhtml {\n  overflow-y: hidden; }\n\nbody {\n  overflow-y: scroll;\n  background-color: #000000;\n  background-image: url(\"http://i.imgur.com/NpV3Wms.png\"); }\n\nbody {\n  background-size: cover;\n  background-repeat: no-repeat;\n  font-family: 'Space Mono', monospace;\n  font-size: 16px;\n  display: block;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  line-height: 1.6;\n  margin-bottom: 5%;\n  background-attachment: fixed; }\n\n.container {\n  position: relative;\n  width: 100%;\n  max-width: 960px;\n  margin: 0 auto;\n  padding: 0 20px;\n  box-sizing: border-box; }\n\n.view-container {\n  margin-top: 125px;\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 30px;\n  width: 75%; }\n\n.about-view .about-content {\n  padding: 5% 10%; }\n  .about-view .about-content .content-image .image {\n    border-radius: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto; }\n\n.nav {\n  -webkit-box-pack: center;\n  justify-content: center;\n  background: rgba(255, 255, 255, 0.9);\n  margin: 0;\n  width: 100%;\n  height: 100px;\n  border-bottom: 3px solid #d75c37;\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  display: flex;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1000;\n  flex-flow: row;\n  align-items: center; }\n  .nav .nav-row {\n    display: flex;\n    flex-flow: row;\n    -webkit-box-align: center;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n    width: 80%; }\n    .nav .nav-row .nav-content {\n      text-transform: uppercase;\n      letter-spacing: 1px;\n      display: flex;\n      align-items: center;\n      font-size: 0.8em; }\n      .nav .nav-row .nav-content #nav-name {\n        font-size: 2em; }\n      .nav .nav-row .nav-content #nav-title {\n        margin-left: 20px;\n        text-transform: lowercase;\n        display: inline-block; }\n        @media screen and (max-width: 780px) {\n          .nav .nav-row .nav-content #nav-title {\n            display: none; } }\n    .nav .nav-row ul {\n      list-style: none;\n      margin: 0;\n      padding: 20px;\n      font-size: .8em;\n      text-transform: uppercase;\n      display: flex;\n      flex-flow: row;\n      justify-content: flex-start;\n      align-items: center; }\n      .nav .nav-row ul li {\n        float: right;\n        margin: 10px; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
 /* 241 */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function () {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for (var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if (item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function (modules, mediaQuery) {
+			if (typeof modules === "string") modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for (var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if (typeof id === "number") alreadyImportedModules[id] = true;
+			}
+			for (i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if (typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if (mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if (mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+/***/ },
+/* 242 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -28265,64 +28323,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 242 */
-/*!**************************************!*\
-  !*** ./~/css-loader/lib/css-base.js ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function () {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for (var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if (item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function (modules, mediaQuery) {
-			if (typeof modules === "string") modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for (var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if (typeof id === "number") alreadyImportedModules[id] = true;
-			}
-			for (i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if (typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if (mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if (mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
 
 /***/ }
 /******/ ]);
