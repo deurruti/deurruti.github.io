@@ -27834,11 +27834,13 @@
   \*********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(/*! react */ 2);
 	
@@ -27846,14 +27848,81 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Home(props) {
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function Post(_ref) {
+	  var post = _ref.post;
+	
 	  console.log("Here");
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "view-container container project-view" },
-	    "Home"
+	    'div',
+	    { style: { textAlign: 'center', padding: '20px' } },
+	    _react2.default.createElement(
+	      'span',
+	      null,
+	      ' ',
+	      post.title,
+	      ' -  ',
+	      post.desc,
+	      ' '
+	    ),
+	    _react2.default.createElement('hr', null),
+	    _react2.default.createElement('img', { src: post.imgurl, style: { height: "auto", width: "100%" } })
 	  );
 	}
+	
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
+	
+	  function Home() {
+	    _classCallCheck(this, Home);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Home).call(this));
+	
+	    _this.state = {
+	      posts: [{ title: 'TechCloud',
+	        desc: 'A SoundCloud client built with React and Redux',
+	        giturl: "https://github.com/deurruti/techcloud-react-redux",
+	        url: '',
+	        imgurl: 'https://gmkr.io/s/579ad99b7df1b3de7add697a/0'
+	      }, { title: 'The Long Two',
+	        desc: 'A data visualization built with D3.js, jQuery, and Material UI',
+	        giturl: "https://github.com/deurruti/techcloud-react-redux",
+	        url: "http://joshm101.github.io/thelongtwo/",
+	        imgurl: 'https://gmkr.io/s/579adbf42e042be87a9794a5/0'
+	      }, { title: 'Hask-a-Question',
+	        desc: 'A Stack Overflow-like site built with Meteor',
+	        giturl: "https://github.com/deurruti/techcloud-react-redux",
+	        url: '',
+	        imgurl: 'https://gmkr.io/s/579ade037df1b3de7add697c/0'
+	      }, { title: 'UCSC Free and For Sale',
+	        desc: 'A simple sell/exchange site built in Web2py, which utilizes Material UI and Bootstrap ',
+	        url: "https://github.com/deurruti/techcloud-react-redux",
+	        imgurl: 'https://gmkr.io/s/579ae3534f24edd1781ef44b/0'
+	      }]
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'view-container container project-view' },
+	        this.state.posts.map(function (p, idx) {
+	          return _react2.default.createElement(Post, { post: p, key: idx });
+	        })
+	      );
+	    }
+	  }]);
+	
+	  return Home;
+	}(_react2.default.Component);
 	
 	exports.default = Home;
 
