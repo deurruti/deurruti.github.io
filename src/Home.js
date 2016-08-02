@@ -7,6 +7,7 @@ function Post({post}){
     <span> {post.title} -  {post.desc} </span>
     <hr></hr>
     <img src={post.imgurl} style={{height: "auto", width: "100%"}}/>
+    <a href={post.giturl}> Go to repo </a>
     </div>
   );
 }
@@ -30,13 +31,14 @@ class Home extends React.Component{
           },
           {title: 'Hask-a-Question',
           desc: 'A Stack Overflow-like site built with Meteor',
-          giturl:"https://github.com/deurruti/techcloud-react-redux",
+          giturl:"https://bitbucket.org/deurruti/cmps112",
           url: '',
           imgurl: 'https://gmkr.io/s/579ade037df1b3de7add697c/0'
           },
           {title: 'UCSC Free and For Sale',
           desc: 'A simple sell/exchange site built in Web2py, which utilizes Material UI and Bootstrap ',
           url:"https://github.com/deurruti/techcloud-react-redux",
+          giturl: "https://bitbucket.org/jshm101/ucsc-free-for-sale",
           imgurl: 'https://gmkr.io/s/579ae3534f24edd1781ef44b/0'
           }
       ]
