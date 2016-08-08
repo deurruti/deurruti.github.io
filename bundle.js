@@ -27873,10 +27873,24 @@
 	    _react2.default.createElement('hr', null),
 	    _react2.default.createElement('img', { src: post.imgurl, style: { height: "auto", width: "100%" } }),
 	    _react2.default.createElement(
-	      'a',
-	      { href: post.giturl },
-	      ' Go to repo '
-	    )
+	      'div',
+	      null,
+	      '  ',
+	      _react2.default.createElement(
+	        'a',
+	        { href: post.giturl },
+	        ' Go to repo '
+	      )
+	    ),
+	    post.url ? _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'a',
+	        { href: post.url },
+	        ' Go to site '
+	      )
+	    ) : _react2.default.createElement('div', null)
 	  );
 	}
 	
@@ -27896,7 +27910,7 @@
 	        imgurl: 'https://gmkr.io/s/579ad99b7df1b3de7add697a/0'
 	      }, { title: 'The Long Two',
 	        desc: 'A data visualization built with D3.js, jQuery, and Material UI',
-	        giturl: "https://github.com/deurruti/techcloud-react-redux",
+	        giturl: "https://github.com/deurruti/thelongtwo",
 	        url: "http://joshm101.github.io/thelongtwo/",
 	        imgurl: 'https://gmkr.io/s/579adbf42e042be87a9794a5/0'
 	      }, { title: 'Hask-a-Question',
@@ -27906,7 +27920,7 @@
 	        imgurl: 'https://gmkr.io/s/579ade037df1b3de7add697c/0'
 	      }, { title: 'UCSC Free and For Sale',
 	        desc: 'A simple sell/exchange site built in Web2py, which utilizes Material UI and Bootstrap ',
-	        url: "https://github.com/deurruti/techcloud-react-redux",
+	        url: "",
 	        giturl: "https://bitbucket.org/jshm101/ucsc-free-for-sale",
 	        imgurl: 'https://gmkr.io/s/579ae3534f24edd1781ef44b/0'
 	      }]
