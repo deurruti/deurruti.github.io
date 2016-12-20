@@ -20,9 +20,9 @@ export default React.createClass({
           <h3> What I'm looking for </h3>
           <hr></hr>
           <p>
-          I'm looking for an oppurtunity to kickstart my career, I've had the experience building projects that are modest
+          I'm looking for an opportunity to kickstart my career, I've had the experience building projects that are modest
           in scale. However, I'm ready to see what professional software development looks like. I'm passionate about using
-          the latest technologies and trending ones too, I hope I find a team that feels just the same.
+          the latest technologies and trending ones too.
           </p>
           <h3> Built with </h3>
           <hr></hr>
